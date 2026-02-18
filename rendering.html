@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rendering | Tim Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="rendering-page">
+
+<header class="hero small">
+  <div class="wrap">
+    <nav class="topnav" aria-label="Primary">
+      <a class="brand" href="index.html">Tim Lin</a>
+      <div class="links">
+        <a href="index.html">Animation</a>
+        <a href="Rigging & Gaming.html">Rigging & Gaming</a>
+        <a href="storyboard.html">Storyboard</a>
+        <a class="active" href="rendering.html">Rendering</a>
+      </div>
+    </nav>
+
+    <h1>Rendering</h1>
+    <p class="sub">Lighting · Lookdev · Render passes</p>
+  </div>
+</header>
+
+</header>
+
+
+<main class="wrap">
+  <div class="work-row" aria-label="Works">
+  <button class="row-btn prev" type="button" aria-label="Previous">‹</button>
+
+  <div class="row-track">
+    <!-- 卡片 1 -->
+    <article class="card work-card">
+      <div class="video">
+        <iframe src="https://player.vimeo.com/video/1165840646"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+          title="Work 01"></iframe>
+      </div>
+      <h3>Rendering Reel</h3>
+      <p>Lighting · Lookdev · Render passes · Nuke</p>
+    </article>
+
+    <!-- 卡片 2 -->
+    <article class="card work-card">
+      <div class="video">
+        <iframe src="https://player.vimeo.com/video/1165845164"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+          title="Work 02"></iframe>
+      </div>
+      <h3>Rendering Study 02</h3>
+      <p>Blender GIF + VFX</p>
+    </article>
+
+    <!-- 卡片 3（YouTube） -->
+    <article class="card work-card">
+      <div class="video">
+        <iframe
+          src="https://www.youtube.com/embed/KWxIr5tJzgk"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          title="Nissan Leaf Render"></iframe>
+      </div>
+      <h3>Nissan Leaf Render</h3>
+      <p>Automotive rendering / lookdev/ Nissan Leaf Award</p>
+    </article>
+  </div>
+
+  <button class="row-btn next" type="button" aria-label="Next">›</button>
+</div>
+
+
+
+  <!-- Contact -->
+  <section class="section contact">
+    <h2>Contact</h2>
+
+    <a class="btn" href="mailto:thtim1111@gmail.com">Email Me</a>
+    <a class="btn" href="https://www.linkedin.com/in/timlin5029" target="_blank" rel="noopener">LinkedIn</a>
+  </section>
+</main>
+
+<script>
+  (function(){
+    const track = document.querySelector('.slider-track');
+    const prev = document.querySelector('.slider-btn.prev');
+    const next = document.querySelector('.slider-btn.next');
+    if(!track || !prev || !next) return;
+
+    function slideBy(dir){
+      const w = track.clientWidth;
+      track.scrollBy({ left: dir * w, behavior: 'smooth' });
+    }
+
+    prev.addEventListener('click', () => slideBy(-1));
+    next.addEventListener('click', () => slideBy(1));
+
+    track.addEventListener('keydown', (e) => {
+      if(e.key === 'ArrowLeft') slideBy(-1);
+      if(e.key === 'ArrowRight') slideBy(1);
+    });
+  })();
+</script>
+
+<script>
+  (function(){
+    const track = document.querySelector('.row-track');
+    const prev = document.querySelector('.row-btn.prev');
+    const next = document.querySelector('.row-btn.next');
+    if(!track || !prev || !next) return;
+
+    function slideBy(dir){
+      const w = track.clientWidth;
+      track.scrollBy({ left: dir * w, behavior: 'smooth' });
+    }
+
+    prev.addEventListener('click', () => slideBy(-1));
+    next.addEventListener('click', () => slideBy(1));
+
+    // 滑鼠滾輪/觸控板：把上下滾動轉成左右滑動
+    track.addEventListener('wheel', (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        e.preventDefault();
+        track.scrollLeft += e.deltaY;
+      }
+    }, { passive: false });
+  })();
+</script>
+
+
+
