@@ -423,4 +423,21 @@ body.rendering-page .hero .wrap{
   .row-btn.next{ right: 6px; }
 }
 
+body.storyboard-page .hero{
+  background: url("images/storyboard-cover-night.jpg") center/cover no-repeat;
+  position: relative;
+  color: #fff;
+}
+
+body.storyboard-page .hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.45);
+}
+
+body.storyboard-page .hero .wrap{
+  position: relative;
+  z-index: 1;
+}
 
