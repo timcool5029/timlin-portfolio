@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rigging & Gaming | Tim Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="rigging-page">
+<header class="hero small">
+  <div class="wrap">
+    <nav class="topnav" aria-label="Primary">
+      <a class="brand" href="index.html">Tim Lin</a>
+      <div class="links">
+        <a href="index.html">Animation</a>
+        <a class="active" href="Rigging &amp; Gaming.html">Rigging &amp; Gaming</a>
+        <a href="storyboard.html">Storyboard</a>
+        <a href="rendering.html">Rendering</a>
+      </div>
+    </nav>
+
+    <h1>Rigging &amp; Gaming</h1>
+    <p class="sub">Rigs · Controls · Deformers · Tools</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- Works: same horizontal slider layout as Rendering page -->
+  <div class="work-row" aria-label="Works">
+    <button class="row-btn prev" type="button" aria-label="Previous">‹</button>
+
+    <div class="row-track">
+      <!-- Card 1 -->
+      <article class="card work-card">
+        <div class="video">
+          <!-- Replace this iframe with your own Vimeo/YouTube embed (or keep image + play overlay if you prefer). -->
+          <iframe
+            src="https://player.vimeo.com/video/1167483468"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            title="Rigging Work 01"></iframe>
+        </div>
+        <h3>Blizzard Game Durf animation</h3>
+        <p>Blizzard contest · Game animation </p>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card work-card">
+        <div class="video">
+          <iframe
+            src="https://player.vimeo.com/video/1167495155"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            title="Rigging Work 02"></iframe>
+        </div>
+        <h3>KAP Game Animation & Rig</h3>
+        <p>Game rig · Game animation · Unify to Unity</p>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card work-card">
+        <div class="video">
+          <iframe
+            src="https://player.vimeo.com/video/1167476133"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            title="Gaming Work 03"></iframe>
+        </div>
+        <h3>Bachelor rigging/ Tools</h3>
+        <p>Rigging </p>
+      </article>
+    </div>
+
+    <button class="row-btn next" type="button" aria-label="Next">›</button>
+  </div>
+
+  <!-- Contact: match Rendering page -->
+  <section class="section contact">
+    <h2>Contact</h2>
+    <a class="btn" href="mailto:thtim1111@gmail.com">Email Me</a>
+    <a class="btn" href="https://www.linkedin.com/in/timlin5029" target="_blank" rel="noopener">LinkedIn</a>
+  </section>
+</main>
+
+<script>
+  (function(){
+    const track = document.querySelector('.row-track');
+    const prev = document.querySelector('.row-btn.prev');
+    const next = document.querySelector('.row-btn.next');
+    if(!track || !prev || !next) return;
+
+    function slideBy(dir){
+      const w = track.clientWidth;
+      track.scrollBy({ left: dir * w, behavior: 'smooth' });
+    }
+
+    prev.addEventListener('click', () => slideBy(-1));
+    next.addEventListener('click', () => slideBy(1));
+
+    // Mouse wheel / trackpad: convert vertical scroll to horizontal scroll
+    track.addEventListener('wheel', (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        e.preventDefault();
+        track.scrollLeft += e.deltaY;
+      }
+    }, { passive: false });
+  })();
+</script>
+</body>
+</html>
