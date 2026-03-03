@@ -32,8 +32,11 @@ h1{
 }
 
 .sub{
+  font-size: 48px;   /* 跟 h1 一樣大 */
   color:#aab3d6;
   margin:10px 0 20px;
+  font-weight: 500;
+  opacity: 0.9;
 }
 
 .btn{
@@ -441,3 +444,152 @@ body.storyboard-page .hero .wrap{
   z-index: 1;
 }
 
+/* ✅ Force horizontal swipe */
+.row-track{
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  scroll-snap-type: x mandatory;
+}
+
+.work-card{
+  scroll-snap-align: start;
+}
+.rigging-page .sub{
+  font-size: 20px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+.rigging-page .brand{
+  color: #4da3ff;
+  text-decoration: none;
+}
+
+.rigging-page .brand:hover{
+  color: #7dbaff;
+}
+
+.brand{
+  color: #4da3ff;
+}
+.rigging-page .active-pick{
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.storyboard-page .sub{
+  font-size: 20px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+/* Storyboard: keep the Rigging-style menu fixed at viewport bottom-right */
+/* Subnav under hero: looks like Rigging pills + sticks under banner */
+.subnav{
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+
+  background: rgba(10,12,18,.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.subnav .subnav-inner{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 0;
+}
+
+/* make all items look like Rigging hero-menu pills */
+.subnav a{
+  color:#fff;
+  text-decoration:none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(0,0,0,.35);
+  border: 1px solid rgba(255,255,255,.2);
+  backdrop-filter: blur(6px);
+  font-weight: 600;
+}
+
+.subnav a:hover{ background: rgba(0,0,0,.55); }
+
+.subnav a.active{
+  background: var(--accent);
+  color: #08101f;
+  border-color: transparent;
+}
+
+/* layout for right-side links */
+.subnav .links{
+  display:flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+@media (max-width: 700px){
+  .subnav .subnav-inner{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .subnav .links{ justify-content: center; }
+}
+/* Back to Animation = blue */
+.subnav .brand{
+  color: #4da3ff;
+}
+
+/* hover 更亮一點 */
+.subnav .brand:hover{
+  color: #79bdff;
+}
+.rendering-page .sub{
+  font-size: 20px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+/* about page layout */
+.about-grid{
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* 手機版 */
+@media (max-width: 768px){
+  .about-grid{
+    grid-template-columns: 1fr;
+  }
+}
+/* center top menu */
+.subnav .subnav-inner{
+  justify-content: center;
+}
+
+.subnav .links{
+  justify-content: center;
+}
+
+.about-grid img{
+  width: 100%;
+  border-radius: 12px;
+}
+
+.about-grid .card{
+  padding: 18px;
+}
+
+.meta{
+  color: #aab3d6;
+}
+
+.about-page .sub{
+  font-size: 20px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}

@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,7 +7,20 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
+
+
 <body>
+  <nav class="subnav" aria-label="Primary">
+  <div class="wrap subnav-inner" style="justify-content:flex-end;">
+    <div class="links">
+      <a class="active" href="index.html">Animation</a>
+      <a href="Rigging &amp; Gaming.html">Rigging &amp; Gaming</a>
+      <a href="storyboard.html">Storyboard</a>
+      <a href="rendering.html">Rendering</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+</nav>
   <header class="hero hero-cinematic">
     <div class="hero-bg" style="background-image:url('images/portfolio.animation.jpg');"></div>
     <div class="hero-overlay"></div>
@@ -23,149 +35,145 @@
       </div>
 
     </div>
-
-    <div class="hero-menu">
-      <a class="active" href="index.html">Animation</a>
-      <a href="Rigging & Gaming.html">Rigging & Gaming</a>
-      <a href="storyboard.html">Storyboard</a>
-      <a href="rendering.html">Rendering</a>
-    </div>
   </header>
-
-
-
-
 
   <main class="wrap">
 
     <!-- Demo Reel -->
     <section id="reel" class="section">
-      <h2>Demo Reel</h2>
-      <div class="video">
-        <iframe src="https://player.vimeo.com/video/1158271359" frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
-        </iframe>
-      </div>
-    </section>
+  <h2 id="mainReelTitle">Demo Reel 2026</h2>
+  <p id="mainReelDesc" class="hint">Choose a video below</p>
 
-    <!-- Works -->
-    <section class="section">
-      <h2>Selected Shots</h2>
+  <div class="video">
+    <iframe
+      id="mainReelFrame"
+      src="https://player.vimeo.com/video/1158271359"
+      frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
 
-      <div class="grid">
+  <div class="work-row" aria-label="Choose a video">
+    <button class="row-btn prev" type="button" aria-label="Previous">‹</button>
 
-        <!-- Jealous -->
-        <div class="card">
-          <div class="thumb">
-            <a href="#" class="open-video" data-link="https://player.vimeo.com/video/1165533280">
-              <img src="images/jealous.jpg" alt="Jealous.jpg">
-              <span class="play">▶</span>
-            </a>
-          </div>
-          <h3>Jealous</h3>
-          <p>Dialogue · Acting · Camera work</p>
+    <div class="row-track">
+      <article class="card work-card pick-video"
+        data-src="https://player.vimeo.com/video/1158271359"
+        data-title="Demo Reel 2026"
+        data-desc="Character Animation · Acting">
+        <div class="thumb">
+          <img src="images/portfolio.animation.jpg" alt="Demo Reel thumbnail">
+          <span class="play">▶</span>
         </div>
+        <h3>Demo Reel 2026</h3>
+        <p>Character Animation</p>
+      </article>
 
-
-        <!-- Little Kid -->
-        <div class="card">
-          <div class="thumb">
-            <a href="#" class="open-video" data-link="https://player.vimeo.com/video/1165535528"
-              aria-label="Play Little Kid">
-              <img src="images/littlekid.png" alt="littlekid">
-              <span class="play">▶</span>
-            </a>
-          </div>
-          <h3>Little Kid</h3>
-          <p>Pantomime · Body mechanics</p>
+      <article class="card work-card pick-video"
+        data-src="https://player.vimeo.com/video/1165533280"
+        data-title="Jealous"
+        data-desc="Dialogue · Acting · Camera work">
+        <div class="thumb">
+          <img src="images/jealous.jpg" alt="Jealous thumbnail">
+          <span class="play">▶</span>
         </div>
+        <h3>Jealous</h3>
+        <p>Dialogue · Acting · Camera work</p>
+      </article>
 
-        <!-- Ambitious -->
-        <div class="card">
-          <div class="thumb">
-            <a href="#" class="open-video" data-link="https://www.youtube.com/embed/mfHIUYgsRu8"
-              aria-label="Play Ambitious">
-              <img src="images/ambitious.jpg" alt="Ambitious">
-              <span class="play">▶</span>
-            </a>
-          </div>
-          <h3>Ambitious</h3>
-          <p>Storyboard · Rigging · Animation</p>
+      <article class="card work-card pick-video"
+        data-src="https://player.vimeo.com/video/1165535528"
+        data-title="Little Kid"
+        data-desc="Pantomime · Body mechanics">
+        <div class="thumb">
+          <img src="images/littlekid.png" alt="Little Kid thumbnail">
+          <span class="play">▶</span>
         </div>
+        <h3>Little Kid</h3>
+        <p>Pantomime · Body mechanics</p>
+      </article>
 
-      </div>
-    </section>
+      <article class="card work-card pick-video"
+        data-src="https://player.vimeo.com/video/1169826911"
+        data-title="Ambitious"
+        data-desc="Storyboard · Rigging · Animation">
+        <div class="thumb">
+          <img src="images/ambitious_poster.jpg" alt="Ambitious thumbnail">
+          <span class="play">▶</span>
+        </div>
+        <h3>Ambitious</h3>
+        <p>Storyboard · Rigging · Animation · Phoenix Flower Season Graduation Film Festival</p>
+      </article>
+    </div>
 
-    <!-- Contact -->
+    <button class="row-btn next" type="button" aria-label="Next">›</button>
+  </div>
+</section>
+    <!-- ✅ Contact 一定要在 main 裡面 -->
     <section class="section contact">
       <h2>Contact</h2>
-
-      <a class="btn" href="mailto:thtim1111@gmail.com">
-        Email Me
-      </a>
-
-      <a class="btn" href="https://www.linkedin.com/in/timlin5029" target="_blank">
-        LinkedIn
-      </a>
+      <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+        <a class="btn" href="mailto:thtim1111@gmail.com">Email</a>
+        <a class="btn" href="https://www.linkedin.com/in/timlin5029" target="_blank">LinkedIn</a>
+      </div>
+      <p class="foot">© 2026 Tim Lin</p>
     </section>
 
   </main>
 
-  <footer class="foot">
-    <p>© 2026 Tim Lin</p>
-  </footer>
-
-
-  <!-- Video Modal (click thumbnail to open) -->
-  <div id="modal" class="modal" aria-hidden="true">
-    <div class="modal-backdrop"></div>
-    <div class="modal-panel" role="dialog" aria-modal="true">
-      <button class="modal-close" aria-label="Close">✕</button>
-      <div class="modal-video">
-        <iframe id="modalFrame" src="" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-  </div>
-
+  <!-- ✅ 所有 script 都放在這裡（body 最底） -->
   <script>
-    const modal = document.getElementById('modal');
-    const frame = document.getElementById('modalFrame');
+    document.addEventListener('DOMContentLoaded', () => {
+      const mainFrame = document.getElementById('mainReelFrame');
+      const titleEl = document.getElementById('mainReelTitle');
+      const descEl = document.getElementById('mainReelDesc');
 
-    function openModal(url) {
-      const hasQuery = url.includes('?');
-      const autoplayUrl = url + (hasQuery ? '&' : '?') + 'autoplay=1';
-      frame.src = autoplayUrl;
-      modal.classList.add('show');
-      modal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-    }
+      const track = document.querySelector('#reel .row-track');
+      const prev = document.querySelector('#reel .row-btn.prev');
+      const next = document.querySelector('#reel .row-btn.next');
+      const picks = document.querySelectorAll('#reel .pick-video');
 
-    function closeModal() {
-      modal.classList.remove('show');
-      modal.setAttribute('aria-hidden', 'true');
-      frame.src = '';
-      document.body.style.overflow = '';
-    }
+      if (!mainFrame || !titleEl || !descEl || !track || !prev || !next || !picks.length) return;
 
-    document.querySelectorAll('.open-video').forEach(a => {
-      a.addEventListener('click', (e) => {
-        e.preventDefault();
-        openModal(a.dataset.link);
-      });
-    });
+      function setMain(card) {
+        const src = card.dataset.src || '';
+        const title = card.dataset.title || card.querySelector('h3')?.textContent || 'Demo Reel';
+        const desc = card.dataset.desc || card.querySelector('p')?.textContent || '';
 
-    modal.addEventListener('click', (e) => {
-      if (e.target.classList.contains('modal-backdrop')) closeModal();
-    });
+        const hasQuery = src.includes('?');
+        mainFrame.src = src + (hasQuery ? '&' : '?') + 'autoplay=1';
 
-    document.querySelector('.modal-close').addEventListener('click', closeModal);
+        titleEl.textContent = title;
+        descEl.textContent = desc;
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeModal();
+        picks.forEach(p => p.classList.remove('active-pick'));
+        card.classList.add('active-pick');
+      }
+
+      picks.forEach(card => {
+  card.style.cursor = 'pointer';
+  card.addEventListener('click', (e) => {
+    const targetCard = e.target.closest('.pick-video');
+    if (targetCard) setMain(targetCard);
+  });
+});
+
+      function slideBy(dir) {
+        track.scrollBy({ left: dir * track.clientWidth, behavior: 'smooth' });
+      }
+      prev.addEventListener('click', () => slideBy(-1));
+      next.addEventListener('click', () => slideBy(1));
+
+      // 觸控板：上下滾輪 → 左右滑
+      track.addEventListener('wheel', (e) => {
+        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+          e.preventDefault();
+          track.scrollLeft += e.deltaY;
+        }
+      }, { passive: false });
+
+      // 預設選第一支
+      setMain(picks[0]);
     });
   </script>
-
-</body>
-
-</html>
